@@ -1,0 +1,41 @@
+<script src="{$path}vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{$path}vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="{$path}vendor/metisMenu/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{$path}dist/js/sb-admin-2.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="{$path}vendor/raphael/raphael.min.js"></script>
+<script src="{$path}vendor/morrisjs/morris.min.js"></script>
+<script src="{$path}data/morris-data.js"></script>
+
+
+<!-- DataTables JavaScript -->
+{if $datatables}  
+<script src="{$path}vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="{$path}vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+<script src="{$path}vendor/datatables-responsive/dataTables.responsive.js"></script>
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+{/if}
+
+<!-- bootstrap-select JavaScript -->
+{if $bootselect} 
+<script src="{$path}dist/js/bootstrap-select.js"></script>
+{/if}
+
+
+{if $loadvalidator} 
+<script src="{$path}vendor/bootstrap-validator-master/js/validator.js"></script>
+{$validator} 
+{/if}
+
+{if $loadajax}
+{$xajax}
+{/if}
+
+

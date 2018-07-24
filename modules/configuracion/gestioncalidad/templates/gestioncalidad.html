@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    {include file="$templates/head.html"}
+    <body>
+
+        <div id="wrapper">
+
+            {include file="$templates/navigation.html"}
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Calidad</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Los siguientes son los grupos y productos cargados en el sistema.
+                            </div>
+
+                            <div class="panel-heading" id="addcl">
+                                <a href="javascript:;" onclick="uploaddiv('form')">
+                                    <span class="glyphicon-class ">Nuevo</span>	
+                                    <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                </a>
+                            </div>
+
+
+                            <div class="panel-heading" id="listcl" style="display:none;">
+                                <a href="javascript:;" onclick="uploaddiv('list')">
+                                    <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+                                    <span class="glyphicon-class">Volver a productos</span>	
+                                </a>
+                            </div>	
+                            <!-- /.panel-heading -->
+
+
+                            <div class="panel-body" id="form" style="display:none;">
+                                <form role="form">
+                                    <div class="col-md-12">
+                                        <div class="form-group has-warning">
+                                            <label class="control-label" for="inputError">Nombre Grupo </label>
+                                            <input type="text" class="form-control" id="inputError">
+                                        </div>
+                                    </div>	
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-outline btn-primary btn-lg btn-block">Crear Grupo</button>
+                                    </div> 
+                                </form>
+                            </div>
+
+                            <iframe src="https://bootsnipp.com/fullscreen/M3jmA " height="800" width="1040"></iframe> 
+                            <!-- /#page-wrapper -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        {include file="$templates/script.html"}
+        <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+        <script>
+
+            $(function () {
+                var currentYear = new Date().getFullYear();
+
+                var redDateTime = new Date(currentYear, 2, 13).getTime();
+                var circleDateTime = new Date(currentYear, 1, 20).getTime();
+                var borderDateTime = new Date(currentYear, 0, 12).getTime();
+
+                $('#calendar').calendar({
+                    customDayRenderer: function (element, date) {
+                        if (date.getTime() == redDateTime) {
+                            $(element).css('font-weight', 'bold');
+                            $(element).css('font-size', '15px');
+                            $(element).css('color', 'green');
+                        } else if (date.getTime() == circleDateTime) {
+                            $(element).css('background-color', 'red');
+                            $(element).css('color', 'white');
+                            $(element).css('border-radius', '15px');
+                        } else if (date.getTime() == borderDateTime) {
+                            $(element).css('border', '2px solid blue');
+                        }
+                    }
+                });
+            });
+        </script>
+        <script>
+            function uploaddiv(val) {
+                if (val == 'form' || val == 'form2') {
+                    $("#table").hide();
+                    $('#' + val).show(250);
+                    $("#addcl").hide(350);
+                    $('#listcl').show(250);
+                }
+                if (val == 'list') {
+                    $('#table').show(250);
+                    $('#form').hide(250);
+                    $('#form2').hide(250);
+                    $("#addcl").show(350);
+                    $('#listcl').hide(250);
+                }
+            }
+        </script>
+    </body>
+</html>
