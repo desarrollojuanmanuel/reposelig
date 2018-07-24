@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of index
+ * Clase main para inicio del programa
  *
  * @author Juan Mannuel Gutierrez
  */
