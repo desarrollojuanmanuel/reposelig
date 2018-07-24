@@ -9,7 +9,7 @@
 /**
  * Description of index
  *
- * @author Juan M. Gutierrez
+ * @author Juan Mannuel Gutierrez
  */
 abstract class ClassIndex {
 
