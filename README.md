@@ -1,2 +1,2 @@
 # reposelig
-nuevo repo
+nuevo repositorio para el proyecto selig
