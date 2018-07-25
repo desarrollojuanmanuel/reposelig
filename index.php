@@ -7,16 +7,16 @@
  */
 
 /**
- * Description of index
+ * Clase main para inicio del programa
  *
  * @author Juan Mannuel Gutierrez
+ * email juangu455@gamil.com
  */
 abstract class ClassIndex {
 
     static function load() {
-        header("Location: http://localhost/selig/modules/home/");    
+        header("Location: http://localhost/selig/modules/home/");
     }
 
 }
-
 ClassIndex::load();
